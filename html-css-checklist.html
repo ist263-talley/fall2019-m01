@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/fall2019-m01/ist263-talley.css">
+    <title>IST263 - Intro. to Front-End Web Development - Syracuse University iSchool</title>
+</head>
+
+<body>
+<div id="top-banner">
+  <img src="/fall2019-m01/block-s.png" alt="Syracuse University" height="53"/>
+  <div id="logo-container">
+      <a href="http://ischool.syr.edu">
+      <img src="/fall2019-m01/ischool-logo.jpg" alt="Syracuse University School of Information Studies"/>
+      </a>
+  </div>
+</div>
+<div id="page-container">
+<nav id="nav-column">
+<ul>
+  <li><a href="/fall2019-m01/">Course Home</a></li>
+  <li><a href="/fall2019-m01/index.html#schedule">Course Schedule</a></li>
+  <li><a href="/fall2019-m01/syllabus.html">Syllabus</a></li>
+  <li><a href="/fall2019-m01/computer-setup.html">Computer Setup</a></li>
+  <li><a href="/fall2019-m01/individual-project.html">Individual Project</a></li>
+  <li><a href="/fall2019-m01/question-bank.html">Question Bank</a></li>
+</ul>
+</nav>
+<div id="page-body">
+<header id="header-panel">
+<h1>HTML &amp; CSS Checklist</h1>
+</header>
+<main id="page-content">
+<p>In response to input from students about assignment grading comments, I have created this guide for reviewing your HTML and CSS before submitting for grading to reduce your chances of losing points due to avoidable mistakes or overall quality problems. Some judgment will always be involved in evaluation of how well a front-end dev task was completed. We talk all the time in class about "best practice" and "not best practice" and you'll do well to take note of those moments.</p>
+<p>I won't attempt to summarize all possible quality rubrics or coding guidance here, still less to reproduce the excellent resources we use for class readings and references at <a href="http://www.w3schools.com" target="_blank">w3schools</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/" target="_blank">developer.mozilla.org</a>. You should still refer to those tools early and often! I intend this Checklist for two purposes:
+<ul>
+    <li>Give students a helpful reality check when evaluating their work before submitting for grading</li>
+    <li>Give us all a reference for grading feedback I return your way. Going forward, I'll expect you to have this stuff down, and if I see general HTML or CSS issues in your work, I'll cite 'HTML basics' or 'CSS basics' and focus comments on the key points of the assignments I'm reviewing.</li>
+</ul>
+</p>
+<p>In addition to the checklist below, I'll offer a couple general pointers:
+<dl>
+    <dt>Keep the links at those fine resources linked above open while you work.</dt>
+    <dd>Stay focused on pages relevant to the assignment, but be ready to hunt up more basic guidance as you go.</dd>
+    <dt>Always view your work in GitHub Pages to check for obvious broken code problems.</dt>
+    <dd>Refer to our <a href="https://ist263-talley.github.io/fall2019-m01/work-with-github.html" target="_blank">Work with GitHub</a> page if you have any question on how to do this. It's a basic requirement of the class.</dd>
+    <dt>Submit your GitHub Pages URL to the W3C's Markup Validation Service</dt>
+    <dd>This invaluable tool is free for you use at <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></dd>
+    <dt>Read assignment instructions <u>carefully</u> and consult your study partners (highly encouraged!) and other fellow students or email questions to me if you don't understand.</dt>
+    <dd>Those clarification requests need to happen far enough ahead of the submission deadline to get a timely response. Sunday evening emails probbably won't be seen until Monday.</dd>
+</dl>
+</p>
+<h2>Onward to the Checklist!</h2>
+<ul id="the-checklist">
+    <lh>HTML Pointers</lh>
+    <li>Always include these elements in any HTML:<br/>
+        <code>&lt;!doctype html&lt;<br/>
+        &lt;html&gt;<br/>
+        &lt;head&gt;<br/>
+        &lt;title&gt;Page Title&lt;/title&lt;<br/>
+        &lt;/head&gt;<br/>
+        &lt;body&gt;<br/>
+        &lt;!-- page content goes here -->&gt;<br/>
+        &lt;/body&gt;<br />
+        &lt;/html&gt;</code>
+    </li>
+    <li><b>Close your tags!</b> This includes standalones like the <code>&lt;link /&gt;</code> tag in the <code>&lt;head/&gt;</code>, <code>&lt;img/&lt; tags that place your images, etc. Omitting these standalone closing / symbols won't break your browser, but it will lower your grade. It's a clear best practice.</code></li>
+    <li>Create a base starter HTML file you can open and Save-As with a new name to begin your assignment.
+        <ul>
+            <li>Include the semantic HTML structural tags so you don't forget them: <code>&lt;header/&lt; &lt;main&lt; &lt;section/&lt; &lt;article/&lt; &lt;footer/&gt;</code></li>
+            <li>Know the difference between <code>&lt;head/&gt;</code> and <code>&lt;header/&gt;</code>.</li>
+        </ul>
+    </li>
+    <li>Use your heading weightings with semantic structure in mind.
+        <ul>
+            <li>Only <u>one</u> (1) <code>&lt;h1/&gt;</code> per page, and match its keywords to the Page Title.</li>
+            <li>Major sections have <code>&lt;h2&gt;</code> headings, e.g., the Education, Work Experience, and Skills sections in a resume all would be wrapped in <code>&lt;h2&gt;</code> tags.</li>
+            <li>Within a major <code>&lt;h2&gt;</code> section, the next most important headings <u>logically equivalent</u> headings would have <code>&lt;h3/&lt; tags. Then within <code>&lt;h3/&lt; subsections, the sub-subsections would have <code>&lt;h4/&gt;</code> headings, and so on.</li>
+            <li><b>Never</b> use heading tags just to style content for visual hierarchy. Visual hierarchy is a good design idea, but it's accomplished in the CSS, not in properly semantic HTML.</li>
+        </ul>
+    </li>
+    <li>Keep parent-child relationships aligned with appropriate elements as components. This means, for example, a <code>table/</code> element contains only <code>&lt;tr/&lt; &lt;td/&gt;</code> and other table-specific child elements. A <code>ul/</code> element does not wrap paragraphs or headings, only <code>&lt;li&gt;</code> elements would be its direct children. A list item may possibly contain an <code>img/</code> element to place an image in the list if content needs call for it, but be always mindful of appropriate syntax for parent-child relationships. When in doubt, consult those linked resources.</li>
+    <li>For link <code>&lt;a href="path"&gt;</code> and <code>&lt;img src="path"&gt;</code> values, use either full HTTP paths for off-site URLs, or for URLs on the current site use either relative or full <u>relative</u> paths to local URLs.
+        <ul>
+            <li>Full HTTP path includes the external domain and full path to the resource:<br />
+                <code>href="http://domain.com/folder/subfolder/filename.html"</code></li>
+            <li>Relative path starts from the HTML file's current position and gives the path from there. A relative path to an image file in a folder one step down the hierarchy would look like <code>src="images/filename.jpg"</code>. A relative path to a CSS file one step <u>upward</u> in the folder hierarchy would look like <code>href="../style.css"</code></li>
+            <li>A <u>full</u> relative path gives the entire path from the root folder to the local resource. If all CSS files were stored together in a single subfolder under the root &mdash; a good practice, because it keeps the path simple and well-known, so you don't waste debugging time on it &mdash; you would see something like <code>href="/css-files/style.css"</code>.</li>
+        </ul>
+    <li>Markup <u>all content</u> in the file &mdash; don't leave any text without proper HTML tagging to express its role in the page.</li>
+    <li>Add <code>&lt;!-- comments -->&lt; liberally throughout your code to explain decisions you made & your intentions with your HTML. This gves you a good reminder when you return to the code and it also provides guidance to anyone else who has to maintain your code. Plus it helps me understand where you were going with your work, so I can give better feedback.</code></li>
+    <lh>CSS Pointers</lh>
+    <li>As for hyperlink anchor tags and image tags, watch your CSS file paths correctly to get your <code>&lt;link href="path"&gt;</code> pointed to the right place.</li>
+    <li>An external CSS file includes no HTML markup, such as <code>&lt;style&gt;</code>, and it can be linked to apply consistent styling to multiple pages on the same site.</li>
+    <li>Internal CSS is contained in a <code>&lt;style/&gt;</code> element within the <code>&lt;head;&gt;</code> element and applies <u>only</u> on the current <u>page</u>.</li>
+    <li>Inline styling is used as minimally as possible to style a single <u>element</u> on a single page, e.g.: <code>&lt;p style="font-weight: bold;"&gt;</code></li>
+    <li>If you find yourself adding the same internal <code>style/</code> tags on multiple pages, move that styling to an external CSS file and link it. If you find yourself applying the same inline CSS to multiple, similar elements, add class="some-class" or id="some-id" attributes on those elements and provide internal or external style rules referencing those attribute values.</li>
+    <li>Pay close attention when referencing our favorite information tools to the supported values for each CSS property. If you use a non-standard one, your CSS will fail. VS Code is helpful here when it offers contextual suggestions as you type the CSS property name, so keep an eye on these.</li>
+</ul>
+</main>
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p><small>Copyright by David Talley<br></small></p>
+        
+        
+    </footer>
+</div>
+</div>
+</body>
+</html>
