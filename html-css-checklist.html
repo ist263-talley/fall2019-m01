@@ -18,9 +18,6 @@
         dl.checklist dt::before {
             content: url(images/checkmark.png);
         }
-        dl.checklist dd::before {
-            content: "- ";
-        }
         
     </style>
 </head>
@@ -133,6 +130,14 @@
     <footer class="col-md-12 text-center">
         
         <hr>
+        <p>
+            Did you notice in the <code>&lt;style/&gt;</code> tag's internal CSS how I used the <code>::before</code> pseudoelement to add those checkmark images? Much better than adding an <code>&lt;img/&gt; tag</code> before each description title. You can use right-click > inspect or view page source to peak at the CSS.<br/>
+            <code>
+            dl.checklist dt::before {<br/>
+                content: url(images/checkmark.png);<br/>
+            }
+            </code>
+        </p>
         <p><small>Copyright by David Talley<br></small></p>
         
         
