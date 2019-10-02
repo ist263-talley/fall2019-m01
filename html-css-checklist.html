@@ -55,10 +55,11 @@
 </dl>
 </p>
 <h2>Onward to the Checklist!</h2>
-<ul id="the-checklist">
-    <lh>HTML Pointers</lh>
-    <li>Always include these elements in any HTML:<br/>
-        <code>&lt;!doctype html&lt;<br/>
+<h3>HTML Pointers</h3>
+<dl class="the-checklist">
+    <dt>Always include these elements in any HTML:</dt>
+        <dd>
+        <code>&lt;!doctype html&gt;<br/>
         &lt;html&gt;<br/>
         &lt;head&gt;<br/>
         &lt;title&gt;Page Title&lt;/title&gt;<br/>
@@ -67,40 +68,49 @@
         &lt;!-- page content goes here -->&gt;<br/>
         &lt;/body&gt;<br />
         &lt;/html&gt;</code>
-    </li>
-    <li><b>Close your tags!</b> This includes standalones like the <code>&lt;link /&gt;</code> tag in the <code>&lt;head/&gt;</code>, <code>&lt;img/&lt; tags that place your images, etc. Omitting these standalone closing / symbols won't break your browser, but it will lower your grade. It's a clear best practice.</code></li>
-    <li>Create a base starter HTML file you can open and Save-As with a new name to begin your assignment.
-        <ul>
-            <li>Include the semantic HTML structural tags so you don't forget them: <code>&lt;header/&lt; &lt;main&lt; &lt;section/&lt; &lt;article/&lt; &lt;footer/&gt;</code></li>
-            <li>Know the difference between <code>&lt;head/&gt;</code> and <code>&lt;header/&gt;</code>.</li>
-        </ul>
-    </li>
-    <li>Use your heading weightings with semantic structure in mind.
-        <ul>
-            <li>Only <u>one</u> (1) <code>&lt;h1/&gt;</code> per page, and match its keywords to the Page Title.</li>
-            <li>Major sections have <code>&lt;h2&gt;</code> headings, e.g., the Education, Work Experience, and Skills sections in a resume all would be wrapped in <code>&lt;h2&gt;</code> tags.</li>
-            <li>Within a major <code>&lt;h2&gt;</code> section, the next most important headings <u>logically equivalent</u> headings would have <code>&lt;h3/&gt;</code> tags. Then within <code>&lt;h3/&gt;</code> subsections, the sub-subsections would have <code>&lt;h4/&gt;</code> headings, and so on.</li>
-            <li><b>Never</b> use heading tags just to style content for visual hierarchy. Visual hierarchy is a good design idea, but it's accomplished in the CSS, not in properly semantic HTML.</li>
-        </ul>
-    </li>
-    <li>Keep parent-child relationships aligned with appropriate elements as components. This means, for example, a <code>table/</code> element contains only <code>&lt;tr/&lt; &lt;td/&gt;</code> and other table-specific child elements. A <code>ul/</code> element does not wrap paragraphs or headings, only <code>&lt;li&gt;</code> elements would be its direct children. A list item may possibly contain an <code>img/</code> element to place an image in the list if content needs call for it, but be always mindful of appropriate syntax for parent-child relationships. When in doubt, consult those linked resources.</li>
-    <li>For link <code>&lt;a href="path"&gt;</code> and <code>&lt;img src="path"&gt;</code> values, use either full HTTP paths for off-site URLs, or for URLs on the current site use either relative or full <u>relative</u> paths to local URLs.
-        <ul>
-            <li>Full HTTP path includes the external domain and full path to the resource:<br />
-                <code>href="http://domain.com/folder/subfolder/filename.html"</code></li>
-            <li>Relative path starts from the HTML file's current position and gives the path from there. A relative path to an image file in a folder one step down the hierarchy would look like <code>src="images/filename.jpg"</code>. A relative path to a CSS file one step <u>upward</u> in the folder hierarchy would look like <code>href="../style.css"</code></li>
-            <li>A <u>full</u> relative path gives the entire path from the root folder to the local resource. If all CSS files were stored together in a single subfolder under the root &mdash; a good practice, because it keeps the path simple and well-known, so you don't waste debugging time on it &mdash; you would see something like <code>href="/css-files/style.css"</code>.</li>
-        </ul>
-    <li>Markup <u>all content</u> in the file &mdash; don't leave any text without proper HTML tagging to express its role in the page.</li>
-    <li>Add <code>&lt;!-- comments -->&lt;</code> liberally throughout your code to explain decisions you made & your intentions with your HTML. This gves you a good reminder when you return to the code and it also provides guidance to anyone else who has to maintain your code. Plus it helps me understand where you were going with your work, so I can give better feedback.</li>
-    <lh>CSS Pointers</lh>
-    <li>As for hyperlink anchor tags and image tags, watch your CSS file paths correctly to get your <code>&lt;link href="path"&gt;</code> pointed to the right place.</li>
-    <li>An external CSS file includes no HTML markup, such as <code>&lt;style&gt;</code>, and it can be linked to apply consistent styling to multiple pages on the same site.</li>
-    <li>Internal CSS is contained in a <code>&lt;style/&gt;</code> element within the <code>&lt;head;&gt;</code> element and applies <u>only</u> on the current <u>page</u>.</li>
-    <li>Inline styling is used as minimally as possible to style a single <u>element</u> on a single page, e.g.: <code>&lt;p style="font-weight: bold;"&gt;</code></li>
-    <li>If you find yourself adding the same internal <code>&lt;style/&gt;</code> tags on multiple pages, move that styling to an external CSS file and link it. If you find yourself applying the same inline CSS to multiple, similar elements, add class="some-class" or id="some-id" attributes on those elements and provide internal or external style rules referencing those attribute values.</li>
-    <li>Pay close attention when referencing our favorite information tools to the supported values for each CSS property. If you use a non-standard one, your CSS will fail. VS Code is helpful here when it offers contextual suggestions as you type the CSS property name, so keep an eye on these.</li>
-</ul>
+        </dd>
+    <dt><b>Close your tags!</b></dt>
+        <dd>This includes standalones like the <code>&lt;link /&gt;</code> tag in the <code>&lt;head/&gt;</code>, <code>&lt;img/&lt;</code> tags that place your images, etc. Omitting these standalone closing / symbols won't break your browser, but it will lower your grade. It's a clear best practice.</dd>
+    <dt>Create a base starter HTML file.</dt>
+        <dd>You can open it and Save-As with a new name to begin each assignment.</dd>
+        <dd></dd>Include the semantic HTML structural tags so you don't forget them: <code>&lt;header/&gt; &lt;main/&gt; &lt;section/&gt; &lt;article/&gt; &lt;footer/&gt;</code></dd>
+        <dd>Know the difference between <code>&lt;head/&gt;</code> and <code>&lt;header/&gt;</code>.</dd>
+    <dt>Use your heading weightings with semantic structure in mind.</dt>
+        <dd>Only <u>one</u> (1) <code>&lt;h1/&gt;</code> per page, and match its keywords to the Page Title.</dd>
+        <dd>Major sections have <code>&lt;h2&gt;</code> headings, e.g., the Education, Work Experience, and Skills sections in a resume all would be wrapped in <code>&lt;h2&gt;</code> tags.</dd>
+        <dd>Within a major <code>&lt;h2&gt;</code> section, the next most important headings <u>logically equivalent</u> headings would have <code>&lt;h3/&gt;</code> tags. Then within <code>&lt;h3/&gt;</code> subsections, the sub-subsections would have <code>&lt;h4/&gt;</code> headings, and so on.</dd>
+        <dd><b>Never</b> use heading tags just to style content for visual hierarchy. Visual hierarchy is a good design idea, but it's accomplished in the CSS, not in properly semantic HTML.</dd>
+<dt>Keep parent-child relationships aligned with appropriate elements as components.</dt>
+    <dd>This means, for example, a <code>table/</code> element contains only <code>&lt;tr/&gt; &lt;td/&gt;</code> and other table-specific child elements.</dd>
+    <dd>A <code>ul/</code> element does not wrap paragraphs or headings, only <code>&lt;li&gt;</code> elements would be its direct children. A list item may possibly contain an <code>img/</code> element to place an image in the list if content needs call for it, but be always mindful of appropriate syntax for parent-child relationships.</dd>
+    <dd>When in doubt, consult those linked resources.</dd>
+<dt>Watch your paths &mdash; full HTTP, relative, and full relative paths.</dt>
+    <dd>For a link <code>&lt;a href="path"&gt;</code> and <code>&lt;img src="path"&gt;</code> values, use either full HTTP paths for off-site URLs, or for URLs on the current site use either relative or full <u>relative</u> paths to local URLs.</dd>
+    <dd>Full HTTP path includes the external domain and full path to the resource:<br />
+                <code>href="http://domain.com/folder/subfolder/filename.html"</code></dd>
+    <dd>Relative path starts from the HTML file's current position and gives the path from there. A relative path to an image file in a folder one step down the hierarchy would look like <code>src="images/filename.jpg"</code>. A relative path to a CSS file one step <u>upward</u> in the folder hierarchy would look like <code>href="../style.css"</code></dd>
+    <dd>A <u>full</u> relative path gives the entire path from the root folder to the local resource. If all CSS files were stored together in a single subfolder under the root &mdash; a good practice, because it keeps the path simple and well-known, so you don't waste debugging time on it &mdash; you would see something like <code>href="/css-files/style.css"</code>.</dd>
+    <dt>Markup <u>all content</u> in the file.</dt>
+        <dd>Don't leave any text without proper HTML tagging to express its role in the page.</dd>
+    <dt>Add <code>&lt;!-- comments --&gt;</code> liberally throughout your code.</dt>
+        <dd>Use comments to explain decisions you made & your intentions with your HTML. This gves you a good reminder when you return to the code and it also provides guidance to anyone else who has to maintain your code.</dd>
+        <dd>Plus it helps me understand where you were going with your work, so I can give better feedback.</dd>
+</dl>
+<h3>CSS Pointers</h3>
+<dl class="the-checklist">
+    <dt>As for hyperlink anchor tags and image tags, watch your CSS file paths.</dt>
+        <dd>Carefully structure your paths to get your <code>&lt;link href="path"&gt;</code> pointed to the right place.</dd>
+    <dt>An external CSS file includes no HTML markup, such as a <code>&lt;style&gt;</code> tag.</dt>
+        <dd>That file can be linked to apply consistent styling to multiple pages on the same site.</dd>
+    <dt>Internal CSS is contained in a <code>&lt;style/&gt;</code> element within the <code>&lt;head;&gt;</code> element.</dt>
+        <dd>That styling applies <u>only</u> on the current <u>page</u>.</dd>
+        <dd>If you find yourself adding the same internal <code>&lt;style/&gt;</code> tags on multiple pages, move that styling to an external CSS file and link it.</dd>
+    <dt>Inline styling is used as minimally as possible to style a single <u>element</u> on a single page, e.g.: <code>&lt;p style="font-weight: bold;"&gt;</code></dt>
+        <dd>If you find yourself applying the same inline CSS to multiple, similar elements, add class="some-class" or id="some-id" attributes on those elements and provide internal or external style rules referencing those attribute values.</dd>
+    <dt>Pay close attention when referencing our favorite information tools to the supported values for each CSS property.</dt>
+        <dd>If you use a non-standard value on a CSS property, your CSS will fail.</dd>
+        <dd>VS Code is helpful here when it offers contextual suggestions as you type the CSS property name, so keep an eye on these.</dd>
+</dl>
 </main>
     <footer class="col-md-12 text-center">
         
