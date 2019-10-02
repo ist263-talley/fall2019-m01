@@ -96,8 +96,8 @@
         <dd>Know the difference between <code>&lt;head/&gt;</code> and <code>&lt;header/&gt;</code>.</dd>
     <dt>Use your heading weightings with semantic structure in mind.</dt>
         <dd>Only <u>one</u> (1) <code>&lt;h1/&gt;</code> per page, and match its keywords to the Page Title.</dd>
-        <dd>Major sections have <code>&lt;h2&gt;</code> headings, e.g., the Education, Work Experience, and Skills sections in a resume all would be wrapped in <code>&lt;h2&gt;</code> tags.</dd>
-        <dd>Within a major <code>&lt;h2&gt;</code> section, the next most important headings <u>logically equivalent</u> headings would have <code>&lt;h3/&gt;</code> tags. Then within <code>&lt;h3/&gt;</code> subsections, the sub-subsections would have <code>&lt;h4/&gt;</code> headings, and so on.</dd>
+        <dd>Major sections have <code>&lt;h2&gt;</code> headings, e.g., the Education, Work Experience, and Skills section headings in a resume all would be wrapped in <code>&lt;h2&gt;</code> tags.</dd>
+        <dd>Within a major <code>&lt;h2&gt;</code> section, the next most important <u>logically equivalent</u> headings would have <code>&lt;h3/&gt;</code> tags. Then within <code>&lt;h3/&gt;</code> subsections, the sub-subsections would have <code>&lt;h4/&gt;</code> headings, and so on.</dd>
         <dd><b>Never</b> use heading tags just to style content for visual hierarchy. Visual hierarchy is a good design idea, but it's accomplished in the CSS, not in properly semantic HTML.</dd>
 <dt>Keep parent-child relationships aligned with appropriate elements as components.</dt>
     <dd>This means, for example, a <code>table/</code> element contains only <code>&lt;tr/&gt; &lt;td/&gt;</code> and other table-specific child elements.</dd>
@@ -118,16 +118,16 @@
 <h3>CSS Pointers</h3>
 <dl class="checklist">
     <dt>As for hyperlink anchor tags and image tags, watch your CSS file paths.</dt>
-        <dd>Carefully structure your paths to get your <code>&lt;link href="path"&gt;</code> pointed to the right place.</dd>
+        <dd>Carefully structure your paths to get your <code>&lt;link href="path"/&gt;</code> pointed to the right place.</dd>
     <dt>An external CSS file includes no HTML markup, such as a <code>&lt;style&gt;</code> tag.</dt>
         <dd>That file can be linked to apply consistent styling to multiple pages on the same site.</dd>
-    <dt>Internal CSS is contained in a <code>&lt;style/&gt;</code> element within the <code>&lt;head;&gt;</code> element.</dt>
+    <dt>Internal CSS is contained in a <code>&lt;style/&gt;</code> element within the <code>&lt;head/&gt;</code> element.</dt>
         <dd>That styling applies <u>only</u> on the current <u>page</u>.</dd>
-        <dd>If you find yourself adding the same internal <code>&lt;style/&gt;</code> tags on multiple pages, move that styling to an external CSS file and link it.</dd>
+        <dd>If you find yourself adding the same internal <code>&lt;style/&gt;</code> tags on multiple pages, move that styling to an external CSS file and link it instead.</dd>
     <dt>Inline styling is used as minimally as possible to style a single <u>element</u> on a single page.</dt>
         <dd>e.g.: <code>&lt;p style="font-weight: bold;"&gt;</code></dd>
-        <dd>If you find yourself applying the same inline CSS to multiple, similar elements, add class="some-class" or id="some-id" attributes on those elements and provide internal or external style rules referencing those attribute values.</dd>
-    <dt>Pay close attention when referencing our favorite information tools to the supported values for each CSS property.</dt>
+        <dd>If you find yourself applying the same inline CSS to multiple, similar elements on a page, add <code>class="some-class"</code> or <code>id="some-id"</code> attributes on those elements and provide internal or external style rules referencing those attribute values.</dd>
+    <dt>Pay close attention when referencing our favorite information tools to the <u>supported values</u> for each CSS property.</dt>
         <dd>If you use a non-standard value on a CSS property, your CSS will fail.</dd>
         <dd>VS Code is helpful here when it offers contextual suggestions as you type the CSS property name, so keep an eye on these.</dd>
 </dl>
