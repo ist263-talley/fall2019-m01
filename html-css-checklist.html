@@ -18,6 +18,9 @@
         dl.checklist dt::before {
             content: url(images/checkmark.png);
         }
+        dl.checklist dd::before {
+            content: "- ";
+        }
         
     </style>
 </head>
@@ -84,11 +87,11 @@
         &lt;/body&gt;<br />
         &lt;/html&gt;</code>
         </dd>
-    <dt><b>Close your tags!</b></dt>
+    <dt>Close your tags!</dt>
         <dd>This includes standalones like the <code>&lt;link /&gt;</code> tag in the <code>&lt;head/&gt;</code>, <code>&lt;img/&lt;</code> tags that place your images, etc. Omitting these standalone closing / symbols won't break your browser, but it will lower your grade. It's a clear best practice.</dd>
     <dt>Create a base starter HTML file.</dt>
         <dd>You can open it and Save-As with a new name to begin each assignment.</dd>
-        <dd></dd>Include the semantic HTML structural tags so you don't forget them: <code>&lt;header/&gt; &lt;main/&gt; &lt;section/&gt; &lt;article/&gt; &lt;footer/&gt;</code></dd>
+        <dd>Include the semantic HTML structural tags so you don't forget them: <code>&lt;header/&gt; &lt;main/&gt; &lt;section/&gt; &lt;article/&gt; &lt;footer/&gt;</code></dd>
         <dd>Know the difference between <code>&lt;head/&gt;</code> and <code>&lt;header/&gt;</code>.</dd>
     <dt>Use your heading weightings with semantic structure in mind.</dt>
         <dd>Only <u>one</u> (1) <code>&lt;h1/&gt;</code> per page, and match its keywords to the Page Title.</dd>
